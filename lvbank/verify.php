@@ -4,13 +4,13 @@ if (isset($_POST['verify'])) {
 $AcctNumb = mysqli_real_escape_string($con, $_POST['account_number']); 
 $BankCode = mysqli_real_escape_string($con, $_POST['bank_code']); 
 
-$sql = mysqli_query($con, "SELECT * FROM transfer_recipient WHERE account_number - '$AcctNumb'") or die(mysali_error(
+$sql = mysqli_query($con, "SELECT * FROM transfer_recipient WHERE account_number = '$AcctNumb'") or die(mysali_error(
 ));
 if ($sql->num_rows > 0) { 
 
 $data = mysqli_fetch_array($sql); 
 $recipient_code = $data[ 'recipient_code']; 
-$name = $data[  "name"]; 
+$name = $data[  "account_name"]; 
 echo "<script> alert('Account Number is already verified with correct bank code generating a recipient code, Click 
 on INITIATE button to transfer fund');</script>"; 
 
@@ -47,7 +47,7 @@ $name = $result->data->account_name;
 
 # code... 
 echo "<script> alert('Account Number is resolved/verified with the Bank Code');</script>"; 
-header('Location: recipient.php2name=' .$name .'&account_number='.$AcctNumb .'&bank_code='.$BankCode) ; 
+header('Location: recipient.php?account_name=' .$name .'&account_number='.$AcctNumb .'&bank_code='.$BankCode) ; 
 exit(); 
 }
 else{ 
@@ -57,12 +57,12 @@ echo "<script> alert('Invalid Account Number or Bank Code, its NOT resolved/veri
 }
 
 ?>
-<html lang="en"> }
-<head> |
-<meta charset="utf-8"> |
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> }
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> |
-<title>Paystack Single Transfer Fund Api Integration in php</title> |
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+<title>Paystack Single Transfer Fund Api Integration in php</title> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -82,7 +82,8 @@ echo htmlentities ($_POST['account_number']);}?>" placeholder="recipient account
      <input type="number" class="form-control" name="bank_code"style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px;" value="<?php if(isset($_POST['bank_code'])){echo
 htmlentities ($_POST['bank_code']);}?>" placeholder="e.g 058, 844" required /><br><br>
  </div>
-<div class="buttonpos1"><input type="submit" name="verify"  value="VERIFY" class="btn btn-primary mb-3"style="width: 300px; height: 100px;background: #CB0707;   border-radius: 99px;"><a href> </button></a></div> 
+<div class="buttonpos1"><input type="submit" name="verify"  value="VERIFY" class="btn btn-primary mb-3"style="width: 300px; height: 100px;background: #CB0707;   border-radius: 99px;">
+<a href> </button></a></div> 
 
     
 
@@ -93,9 +94,9 @@ htmlentities ($_POST['bank_code']);}?>" placeholder="e.g 058, 844" required /><b
 <?php
 if (!empty($_POST['account_number']) && !empty($recipient_code)){
 echo "
-<label>Recipient Code: " .$recipient_code." </label>
+<label> Recipient Code: " .$recipient_code." </label>
 <a href='initiate.php?recipient_code=".$recipient_code. "'>
-<button class='btn btn-md btn-success'>INITIATE</button>
+<button class='btn btn-md btn-success '>INITIATE</button>
 </a>
 ";
 }

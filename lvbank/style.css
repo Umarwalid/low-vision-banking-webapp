@@ -128,8 +128,19 @@ border-radius: 10px;
 }
 
 
+
 /*verify*/
 .verify{
-    height:1000px;
+    height:900px;
     position: relative;
+}
+
+/*initiate*/
+.verifys{
+    height:900px;
+    position: relative;
+}
+
+HTML,BODY,FORM{
+    height: 100%;
 }
