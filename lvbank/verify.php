@@ -73,17 +73,20 @@ echo "<script> alert('Invalid Account Number or Bank Code, its NOT resolved/veri
 
 <div class="input">
     <label class="labelstyle"> Account number </label>  
-    <input type="number" class="form-control" name="account_number" style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px;font-size:100px;" value="<?php if(isset($_POST['account_number'])){
+    <input type="number" class="form-control" name="account_number" style="float: left;width: 900px;height: 139px;background: #D6D6D6;border-radius: 10px;font-size:100px;" value="<?php if(isset($_POST['account_number'])){
 echo htmlentities ($_POST['account_number']);}?>" required /><br><br>
  </div>
  <div class="input">
      <label class="labelstyle" > Bank  code</label>
      
-     <input type="number" class="form-control" name="bank_code"style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px;font-size:100px;" value="<?php if(isset($_POST['bank_code'])){echo
+     <input type="number" class="form-control" name="bank_code"style="float: left;width: 900px;height: 139px;background: #D6D6D6;border-radius: 10px;font-size:100px;" value="<?php if(isset($_POST['bank_code'])){echo
 htmlentities ($_POST['bank_code']);}?>" required /><br><br>
  </div>
-<div class="buttonpos1"><input type="submit" name="verify"  value="VERIFY" class="btn btn-primary mb-3"style="width: 300px; height: 100px;background: #CB0707;   border-radius: 99px;">
-<a href> </button></a></div> 
+
+ 
+
+<div class="buttonpos1"><button type="submit" name="verify"  value="" class="btn btn-primary mb-3"style="width: 300px; height: 100px;background: #CB0707;border-radius: 99px; font-size:40px; color:white">
+VERIFY</button></div> 
 
     
 

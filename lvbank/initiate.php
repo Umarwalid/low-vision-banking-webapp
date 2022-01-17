@@ -115,23 +115,20 @@ if (empty($account_name)) {
 <div class="input">
     <label class="labelstyle"> Amount </label>  
     <input type="number” class="form-control” name="amount" value="" 
-     style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px; font-size:100px"required  />
+     style="float: left;width: 900px;height: 139px;background: #D6D6D6;border-radius: 10px; font-size:100px"required  />
 
  </div>
 
  <div class="input">
-     <label class="labelstyle" > statement</label>
+     <label class="labelstyle" > Statement</label>
      <input type="text" class="form-control" name="reason" value="" 
-style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px;font-size:100px"required />
+style="float: left;width: 900px;height: 139px;background: #D6D6D6;border-radius: 10px;font-size:100px"required />
  </div>
- <div  class="input" style="margin: top 5000px;">
-<label>Verify an Account </label> 
-<a href="verify.php">VERIFY</a>
-</div>
 
 
- <div class="buttonpos1"><input type="submit" name="transfer" value="TRANSFER"  class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: red;
-    border-radius: 99px;" ><a href> </button></a> 
+
+ <div class="buttonpos1"><button type="submit" name="transfer" value=""  class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #CB0707;border-radius: 99px; font-size:40px; color:white">
+ TRANSFER </button>
     </div>
     
 

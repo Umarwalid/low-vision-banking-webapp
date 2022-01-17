@@ -21,14 +21,14 @@
  </div>
 <div class="input2">
     <label class="labelstyle2" for="password">password </label>  
-    <input class=inputbox2 name="password" id="password"  style="font-size:100px;" >
+    <input class=inputbox2 type="password"name="password" id="password"  style="font-size:100px;" >
  </div>
   
  <div class="buttonpos1"><button type="submit" name="login-submit" class="btn btn-primary mb-3"style="width: 300px; height: 100px;background: #CB0707;   border-radius: 99px;font-size: 40px;">Confirm 
 </button></div> 
 
-<div class="buttonpos2"><a href="createacct.php" class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #0724cb;
-    border-radius: 99px;font-size: 20px; padding-top: 30px;">New Account</a>
+<div class="buttonpos2"><a href="createacct.php" class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #0724cb ;
+    border-radius: 99px;font-size: 26px; padding-top: 30px;">New Account</a>
     </div> 
 </form>
 </div>

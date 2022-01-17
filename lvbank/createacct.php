@@ -11,17 +11,17 @@
 
 <body style="background-color: grey;">
 <div class=createacct>
-<p class="labelstyle" style="text-align: center;"> please fill in your information</p>
+<p class="labelstyle" style="text-align: center;"> Please fill in your information</p>
 <form action="database/signup.inc.php" method="post">
 <div class="input">
-     <label class="labelstyle" for="fn">firstname </label>
+     <label class="labelstyle" for="fn">Firstname </label>
      <input type="text" class="form-control" name="fn" style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px; font-size:100px;"
       value="" required /><br><br>
          </div>
     
  
 <div class="input">
-    <label class="labelstyle" for="ln">lastname </label>  
+    <label class="labelstyle" for="ln">Lastname </label>  
     <input type="text" class="form-control" name="ln" style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px; font-size:100px;"
     value="" required /><br><br>
  </div>
