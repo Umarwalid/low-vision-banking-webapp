@@ -86,6 +86,8 @@ else{
 <title>initiate</title> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+</head> 
 </head>
 <?php
 $recipient_code = $_GET['recipient_code'];
@@ -98,6 +100,9 @@ $account_name = $data2['account_name'];
 }
 ?>
 <body style="background-color: grey;">
+
+<div style="padding-left:  34%;padding-right: 34%; "><img src="assets/LOVILOGO.png" style="height: 400px; width: 400px;margin-bottom: 0;"></div>
+
 
 
 <h1 style="text-align: center;">Initiate a Transfer to this Account Name:
@@ -127,13 +132,13 @@ style="float: left;width: 900px;height: 139px;background: #D6D6D6;border-radius:
 
 
 
- <div class="buttonpos1"><button type="submit" name="transfer" value=""  class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #CB0707;border-radius: 99px; font-size:40px; color:white">
- TRANSFER </button>
+ <div class="buttonpos1"><button type="submit" name="transfer" value=""  class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #CB0707;border-radius: 99px; font-size:40px; color:white;border: 2px solid black;">
+  Transfer</button>
     </div>
     
 
 <div class="buttonpos2"><a href="mainpage.php"  class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #17CB07;
-    border-radius: 99px; font-size: 50px;">Back </a>
+    border-radius: 99px; font-size: 50px; padding-top: 18px; border: 2px solid black;">Back </a>
     </div> 
 
     </form>

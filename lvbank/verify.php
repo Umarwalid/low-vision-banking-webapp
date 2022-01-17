@@ -65,8 +65,13 @@ echo "<script> alert('Invalid Account Number or Bank Code, its NOT resolved/veri
 <title>Paystack Single Transfer Fund Api Integration in php</title> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+</head> 
 </head>
 <body style="background-color: grey;">
+
+<div style="padding-left:  34%;padding-right: 34%; "><img src="assets/LOVILOGO.png" style="height: 400px; width: 400px;margin-bottom: 0;"></div>
+
 <div class="verify">
 <p class="labelstyle" style="text-align: center;"> Enter  Destiantion Account Details</p>
 <form method="post" action="">
@@ -85,13 +90,13 @@ htmlentities ($_POST['bank_code']);}?>" required /><br><br>
 
  
 
-<div class="buttonpos1"><button type="submit" name="verify"  value="" class="btn btn-primary mb-3"style="width: 300px; height: 100px;background: #CB0707;border-radius: 99px; font-size:40px; color:white">
-VERIFY</button></div> 
+<div class="buttonpos1"><button type="submit" name="verify"  value="" class="btn btn-primary mb-3"style="width: 300px; height: 100px;background: #CB0707;border-radius: 99px; font-size:40px; color:white; border: 2px solid black;">
+Verify</button></div> 
 
     
 
 <div class="buttonpos2"><a href="mainpage.php"  class="btn btn-primary mb-3" style="width: 300px; font-size: 50px; height: 100px;background: #17CB07;
-    border-radius: 99px;">Back </a></div> 
+    border-radius: 99px;padding-top: 10px; border: 2px solid black;">Back</a></div> 
 </div>
     </form>
 
