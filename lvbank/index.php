@@ -1,3 +1,4 @@
+<?php require "header.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,21 +13,21 @@
 <body style="background-color: grey;">
 <div class=login>
 <p class="labelstyle2" style="text-align: center;"> Low Vision Banking</p>
-<form>
+<form action="database/login.inc.php" method="post">
 <div class="input2">
-     <label class="labelstyle2" for="user">username </label>
+     <label class="labelstyle2" for="user">User name </label>
      
-    <textarea class=inputbox2 name="user" id="user" cols="30" rows="10"></textarea>
+    <input class=inputbox2 name="user" id="user" style="font-size:100px;" >
  </div>
 <div class="input2">
-    <label class="labelstyle2" for="pass">password </label>  
-    <textarea class=inputbox2 name="pass" id="pass" cols="30" rows="10"></textarea>
+    <label class="labelstyle2" for="password">password </label>  
+    <input class=inputbox2 name="password" id="password"  style="font-size:100px;" >
  </div>
   
- <div class="buttonpos1"><a href="mainpage.html"type="submit" class="btn btn-primary mb-3"style="width: 300px; height: 100px;background: #CB0707;   border-radius: 99px;font-size: 40px;">Confirm 
-</a></div> 
+ <div class="buttonpos1"><button type="submit" name="login-submit" class="btn btn-primary mb-3"style="width: 300px; height: 100px;background: #CB0707;   border-radius: 99px;font-size: 40px;">Confirm 
+</button></div> 
 
-<div class="buttonpos2"><a href="createacct.html" class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #0724cb;
+<div class="buttonpos2"><a href="createacct.php" class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #0724cb;
     border-radius: 99px;font-size: 20px; padding-top: 30px;">New Account</a>
     </div> 
 </form>

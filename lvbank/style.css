@@ -6,7 +6,7 @@
 }
 .createacct{margin-top: 100px;
     position: relative;
-    height: 2200px;
+    height: 3000px;
 }
 .inputbox{
   float: left;
@@ -99,11 +99,13 @@ line-height: 75px;
 color: #FFFFFF;
 }
 .balance{
-    
+    font-size: 100px;
+    color: black;
+    text-align: center;
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
-    height: 380px;
+    height: 300px;
 
 
 
@@ -143,4 +145,18 @@ border-radius: 10px;
 
 HTML,BODY,FORM{
     height: 100%;
+}
+
+.buttonpos4{
+    font-size: 50px;
+    position: absolute;
+    bottom:   50%;
+    right: 0%;
+}
+
+/*Details*/
+
+.Details{margin-top: 100px;
+    position: relative;
+    height: 1800px;
 }

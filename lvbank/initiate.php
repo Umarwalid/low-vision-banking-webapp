@@ -7,7 +7,7 @@ $stored_recipient_code='';
 if (isset($_POST['transfer'])) {
 $recipient_code = $_GET['recipient_code'];
 $reason = mysqli_real_escape_string($con, $_POST['reason']); 
-$amount = mysqli_real_escape_string($con, $_POST['amount']); ;
+$amount = mysqli_real_escape_string($con, $_POST['amount']); 
 $sql = mysqli_query($con, "SELECT * FROM transfer_recipient WHERE recipient_code = '$recipient_code'") or die(
 mysqli_error()); 
 if($sql->num_rows>0){
@@ -26,6 +26,7 @@ $fields=[
 'recipient' => $recipient_code, 
  'reason' => $reason 
 ];
+
 $fields_string = http_build_query($fields); 
 //open connection 
 $ch = curl_init(); 
@@ -41,18 +42,18 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 
 curl_setopt ($ch,CURLOPT_RETURNTRANSFER, true);
-$result - curl_exec($ch);
-
+$result = curl_exec($ch);
+var_dump($result);
 $initiate = json_decode($result);
 $status = $initiate->status;
 $message = $initiate->data->status;
 $reference = $initiate->data->reference;
 $amount = $initiate->data->amount;
 $reason = $initiate->data->reason;
-$transfer_code - $initiate->data->transfer_code;
-$createdAt - $initiate->data->createdAt;
+$transfer_code = $initiate->data->transfer_code;
+$createdAt =$initiate->data->createdAt;
 
-if($status=="success"){
+if($status=="true"&& $message=="success"){
 $sql = "INSERT INTO transfer_initiated (reference, amount_in_kobo, reason, status, transfer_code, createdAt) VALUES
 ('$reference', '$amount', '$reason', ‘$message', '$transfer_code', '$createdAt)";
 $result = $con->query($sql);
@@ -64,9 +65,15 @@ header("Location: success.html");
 exit();
 }
 }
+
+else{
+    if($message=="otp"){
+        header('Location: finalize.php='.$transfer_code.'recipient_code='.$recipient_code);
+    exit();
+}
 else{
     echo "<scripts alert('Error: Could not be initiated contact developer'); </script>";
-
+}
 }
 }
 }
@@ -83,7 +90,7 @@ else{
 <?php
 $recipient_code = $_GET['recipient_code'];
 $sql2 = mysqli_query($con, "SELECT * FROM transfer_recipient WHERE recipient_code = '$recipient_code'") or die(
-mysqli_error());
+mysqli_error($con));
 if($sql2->num_rows >0){
 
 $data2 = mysqli_fetch_array($sql2);
@@ -107,15 +114,15 @@ if (empty($account_name)) {
 
 <div class="input">
     <label class="labelstyle"> Amount </label>  
-    <input type="number” class="form-control” name="amount" value="" placeholder="amount to transfer in NGN" 
-     style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px;"required  />
+    <input type="number” class="form-control” name="amount" value="" 
+     style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px; font-size:100px"required  />
 
  </div>
 
  <div class="input">
      <label class="labelstyle" > statement</label>
-     <input type="text" class="form-control" name="reason" value="" placeholder="reason for the fund transfer" 
-style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px;"required />
+     <input type="text" class="form-control" name="reason" value="" 
+style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius: 10px;font-size:100px"required />
  </div>
  <div  class="input" style="margin: top 5000px;">
 <label>Verify an Account </label> 
@@ -128,8 +135,8 @@ style="float: left;width: 700px;height: 139px;background: #D6D6D6;border-radius:
     </div>
     
 
-<div class="buttonpos2"><a href="mainpage.html"  class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #17CB07;
-    border-radius: 99px;">Back </a>
+<div class="buttonpos2"><a href="mainpage.php"  class="btn btn-primary mb-3" style="width: 300px; height: 100px;background: #17CB07;
+    border-radius: 99px; font-size: 50px;">Back </a>
     </div> 
 
     </form>

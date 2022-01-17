@@ -1,3 +1,9 @@
+<?php require "header.php"; ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +17,22 @@
 
 <body style="background-color: grey;">
 <div class=mainpage>
+<p class=accountname> WELCOME</p>
+    <?php
+   
+     echo "<p style='text-align:center ;
+     font-family: Roboto;
+ font-style: normal;
+ font-weight: normal;
+ font-size: 64px;
+ line-height: 75px;
+ color: #FFFFFF;'>".$_SESSION['userid'];"</p>";
+    ?>
+   
+    <div class="balance">
 
-    <p class=accountname> account name:</p>
-    <div class="balance"></div>
+    000000NGN
+    </div>
 
 
 
@@ -29,13 +48,13 @@
 <a href=""><div class="buttonpos3" style="background: #bebb0a;"> Airtime 
 </div></a>
 
-<a href=""><div class="buttonpos3" style="background: #244b04;"> Account details
+<a href="details.php"><div class="buttonpos3" style="background: #244b04;"> Account details
 </div></a>
 
 <a href=""><div class="buttonpos3" style="background: #424f86;"> Contact Us 
 </div></a>
 
-<a href="index.html"><div class="buttonpos3" style="background: #f50000;"> Log Out
+<a href="index.php"><div class="buttonpos3" style="background: #f50000;"> Log Out
 </div></a>
 
 
