@@ -11,7 +11,7 @@
 </head> 
 
 <body style="background-color: grey; ">
-<div style="padding-left:  34%;padding-right: 34%; "><img src="assets/LOVILOGO.png" style="height: 400px; width: 400px;margin-bottom: 0;"></div>
+<div style="padding-left:  34%;padding-right: 34%; "><img src="assets/LVLOGO.png" style="height: 500px; width: 400px;margin-bottom: 0;"></div>
 <div class=createacct>
 <p class="labelstyle" style="text-align: center; margin-top: 0px;"> Please fill in your information</p>
 <form action="database/signup.inc.php" method="post">

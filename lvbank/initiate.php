@@ -101,7 +101,7 @@ $account_name = $data2['account_name'];
 ?>
 <body style="background-color: grey;">
 
-<div style="padding-left:  34%;padding-right: 34%; "><img src="assets/LOVILOGO.png" style="height: 400px; width: 400px;margin-bottom: 0;"></div>
+<div style="padding-left:  34%;padding-right: 34%; "><img src="assets/LVLOGO.png" style="height: 500px; width: 400px;margin-bottom: 0;"></div>
 
 
 

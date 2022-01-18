@@ -11,6 +11,7 @@
 </head> 
 </head> 
 <body>
+  <div style="padding-left:  34%;padding-right: 34%; "><img src="assets/LVLOGO.png" style="height: 500px; width: 400px;margin-bottom: 0;"></div>
  
       <div class="info">
       <div class="guestinfo"> <span > <p style="font-size: 30px;";> Details<hr></p></span> 
