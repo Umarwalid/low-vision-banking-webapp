@@ -12,10 +12,14 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="icon" type="images/x-icon" href="images/sea.png">
+   <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+</head> 
 </head> 
 
 <body style="background-color: grey;">
+
+<div style="padding-left:  34%;padding-right: 34%; "><img src="assets/LVLOGO.png" style="height: 500px; width: 400px;margin-bottom: 0;"></div>
+
 <div class=mainpage>
 <p class=accountname> WELCOME</p>
     <?php
@@ -48,7 +52,7 @@
 <a href=""><div class="buttonpos3" style="background: #bebb0a;"> Airtime 
 </div></a>
 
-<a href="details.php"><div class="buttonpos3" style="background: #244b04;"> Account details
+<a href="details.php"><div class="buttonpos3" style="background: #244b04; padding-top: 25px;"> Account details
 </div></a>
 
 <a href=""><div class="buttonpos3" style="background: #424f86;"> Contact Us 

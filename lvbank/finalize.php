@@ -7,9 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="icon" type="images/x-icon" href="images/sea.png">
+     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+</head> 
 </head> 
 <body>
+  <div style="padding-left:  34%;padding-right: 34%; "><img src="assets/LVLOGO.png" style="height: 500px; width: 400px;margin-bottom: 0;"></div>
  
       <div class="info">
       <div class="guestinfo"> <span > <p style="font-size: 30px;";> Details<hr></p></span> 
