@@ -70,8 +70,7 @@ echo "<script> alert('Invalid Account Number or Bank Code, its NOT resolved/veri
 </head>
 <body style="background-color: grey;">
 
-<div class="img-container"><img src="assets/LVLOGO.png" style="height: 500px; width: 400px;margin-bottom: 0;"></div>
-
+<div class="img-container"><img src="assets/LVLOGO.png" style="height: 400px; width: 500px;margin-bottom: 0;"></div>
 <div class="verify">
 <p class="labelstyle" style="text-align: center;"> Enter  Destiantion Account Details</p>
 <form method="post" action="">
