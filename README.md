@@ -2,4 +2,4 @@
 
 Add the ivbank folder to your xampp/htdocs folder and turn on 
 
-[link](www.youtube.com)Sql and Apache on xampp then go to localhost/ivbank/index.html or any one you want to check
+[link](www.youtube.com) Sql and Apache on xampp then go to localhost/ivbank/index.html or any one you want to check
